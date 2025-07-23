@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  color: var(--color-light--2);
+  font-weight: 400;
+  line-height: 1.6;
+  height: 100vh;
+  overscroll-behavior-y: none;
+  background-color: #fff;
+  padding: 1rem;
+
+}
+
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 100%;
+}
+
+.nav-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+li a {
+  color: rgb(black);
+  font-size: large;
+  font-weight: bold;
+  margin-right: 2rem;
+}
+
+.signup-btn,
+.login-btn {
+  background-color: rgb(45, 78, 58);
+  margin-left: 2rem;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 90px
+}
+
+.signup-btn,
+.login-btn {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 15px;
+}
