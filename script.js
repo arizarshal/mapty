@@ -90,20 +90,24 @@ class App {
   }
 
   _getPosition() {
-    if (navigator.geolocation)
+    if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         this._loadMap.bind(this),
-        function () {
+        function (error) {
+          console.error(error, `An error orrured ${error.message}`);
           alert("Could not get your location");
         }
       );
+    } else {
+      alert("Your browser does not support geolocation");
+    }
   }
 
   _loadMap(position) {
-    const { latitude } = position.coords;
-    const { longitude } = position.coords;
+    const { latitude, longitude } = position.coords;
 
     const coords = [latitude, longitude];
+    console.log(`https://www.google.com/maps/place/${latitude},${longitude}`);
 
     this.#map = L.map("map").setView(coords, this.#mapZoomLevel);
 

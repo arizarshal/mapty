@@ -9,6 +9,14 @@ import {
 
 const router = express.Router();
 
+router.get("/login", (req, res) => {
+  res.sendFile("login.html", { root: "public" });
+});
+
+router.get("/home", (req, res) => {
+  res.sendFile("index.html", { root: "public" });
+});
+
 router.get("/workouts", async (req, res) => {
   const workouts = await getWorkouts();
   res.send(workouts);

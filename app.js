@@ -1,11 +1,18 @@
 import express from "express";
 import workoutRouter from "./routes.js";
-
+import path from "path";
+import { fileURLToPath } from "url";
 import dotenv from "dotenv";
-dotenv.config();
+dotenv.config({ quiet: true });
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 app.use(express.json());
+
+app.use(express.static(__dirname)); // Serve static files from the current directory
+app.use(express.static(path.join(__dirname, "public"))); // Serve static files from the public
 
 app.use("/", workoutRouter);
 
