@@ -12,7 +12,7 @@ CREATE TABLE `workout` (
     INDEX (`workout_type`)
 );
 
-INSERT INTO workout (workout_type, distance, duration, elevation_gain) 
-VALUES 
-('cycling', 55, 30, 20),
-('cycling', 49.7, 35.5, 15);
+-- INSERT INTO workout (workout_type, distance, duration, elevation_gain) 
+-- VALUES 
+-- ('cycling', 55, 30, 20),
+-- ('cycling', 49.7, 35.5, 15);

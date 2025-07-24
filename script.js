@@ -242,6 +242,7 @@ class App {
             <span class="workout__value">24</span>
             <span class="workout__unit">min</span>
           </div>
+          
     `;
 
     if (workout.type === "running")
@@ -256,6 +257,10 @@ class App {
             <span class="workout__value">${workout.cadence}</span>
             <span class="workout__unit">spm</span>
           </div>
+          <div class="workout__actions">
+            <button class="btn-edit">✏️</button>
+            <button class="btn-delete">🗑️</button>
+            </div>
         </li>
     `;
 
@@ -271,6 +276,10 @@ class App {
             <span class="workout__value">${workout.elevationGain}</span>
             <span class="workout__unit">m</span>
           </div>
+          <div class="workout__actions">
+            <button class="btn-edit">✏️</button>
+            <button class="btn-delete">🗑️</button>
+            </div>
         </li>
     `;
 
