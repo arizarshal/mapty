@@ -1,11 +1,11 @@
 import express from "express";
-import {
-  getAllWorkouts,
-  getSingleWorkout,
-  createNewWorkout,
-  updateWorkoutById,
-  deleteWorkoutById,
-} from "./controllers.js";
+// import {
+//   getAllWorkouts,
+//   getSingleWorkout,
+//   createNewWorkout,
+//   updateWorkoutById,
+//   deleteWorkoutById,
+// } from "./controllers.js";
 
 const router = express.Router();
 
@@ -62,10 +62,10 @@ router.get("/", (req, res) => {
 //   }
 // });
 
-router.get("/workouts", getAllWorkouts);
-router.get("/workouts/:id", getSingleWorkout);
-router.post("/workouts", createNewWorkout);
-router.patch("/workouts/:id", updateWorkoutById);
-router.delete("/workouts/:id", deleteWorkoutById);
+// router.get("/workouts", getAllWorkouts);
+// router.get("/workouts/:id", getSingleWorkout);
+// router.post("/workouts", createNewWorkout);
+// router.patch("/workouts/:id", updateWorkoutById);
+// router.delete("/workouts/:id", deleteWorkoutById);
 
 export default router;
